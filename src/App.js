@@ -7,8 +7,27 @@ import Counter from "./state/Counter";
 import HelloWorld from "./state-drills/HelloWorld";
 import Bomb from "./state-drills/Bomb";
 import RouletteGun from "./state-drills/RoultteGun";
-//import RoultteGun from './state-drills/RoultteGun';
+import RoultteGun from './state-drills/RoultteGun';
+import Tabs from './state/Tabs';
 
+
+let tabsProps = [
+  {
+    name: "First tab",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.",
+  },
+  {
+    name: "Second tab",
+    content:
+      "Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    name: "Third tab",
+    content:
+      "Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur."
+  },
+];
 let firstTooltip = (
   <Tooltip color="hotpink" message="tooltip message">
     ipsum
@@ -19,6 +38,7 @@ let secondTooltip = (
     officiis
   </Tooltip>
 );
+
 
 function App() {
   return (
@@ -39,6 +59,7 @@ function App() {
       <HelloWorld />
       <Bomb />
       <RouletteGun />
+      <Tabs tabs={tabsProps} />
     </main>
   );
 }
